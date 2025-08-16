@@ -1,30 +1,27 @@
 class McpMesh < Formula
   desc "Distributed service orchestration framework built on the Model Context Protocol"
   homepage "https://github.com/dhyansraj/mcp-mesh"
-  url "https://github.com/dhyansraj/mcp-mesh/releases/download/v0.5.1/mcp-mesh_v0.5.1_darwin_arm64.tar.gz"
-  sha256 "YOUR_SHA256_HERE"
+  url "https://github.com/dhyansraj/mcp-mesh/releases/download/v0.5.2-fixed-cache/mcp-mesh_v0.5.2-fixed-cache_darwin_arm64.tar.gz"
+  sha256 "ade3feb48f9176f674210ae670c3c997c8c49210318ae17158df337c1002a020"
   license "MIT"
-  version "0.5.1"
+  version "0.5.2-fixed-cache"
 
   # Dependencies
   depends_on "go" => :build
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dhyansraj/mcp-mesh/releases/download/v0.5.1/mcp-mesh_v0.5.1_darwin_amd64.tar.gz"
-      sha256 "YOUR_INTEL_SHA256_HERE"
+      url "https://github.com/dhyansraj/mcp-mesh/releases/download/v0.5.2-fixed-cache/mcp-mesh_v0.5.2-fixed-cache_darwin_amd64.tar.gz"
+      sha256 "2a2339debe6a0aa8b69f587f00bf0c515bd4215cb39d43104d2d4c1e29b95662"
     end
   end
 
   def install
     # Install meshctl CLI
     bin.install "meshctl"
-    
+
     # Install registry binary
-    bin.install "registry" => "mcp-mesh-registry"
-    
-    # Create man pages directory and install documentation (if available)
-    # man1.install "meshctl.1" if File.exist?("meshctl.1")
+    bin.install "mcp-mesh-registry"
   end
 
   def caveats
