@@ -4,7 +4,7 @@ class McpMesh < Formula
   url "https://github.com/dhyansraj/mcp-mesh/releases/download/v0.5.2-fixed-cache/mcp-mesh_v0.5.2-fixed-cache_darwin_arm64.tar.gz"
   sha256 "ade3feb48f9176f674210ae670c3c997c8c49210318ae17158df337c1002a020"
   license "MIT"
-  version "0.5.2-fixed-cache"
+  version "0.5.2-fixed-cache-pat-test"
 
   # Dependencies
   depends_on "go" => :build
