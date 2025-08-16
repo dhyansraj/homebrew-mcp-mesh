@@ -1,18 +1,18 @@
 class McpMesh < Formula
   desc "Distributed service orchestration framework built on the Model Context Protocol"
   homepage "https://github.com/dhyansraj/mcp-mesh"
-  url "https://github.com/dhyansraj/mcp-mesh/releases/download/v0.5.2-with-path-fix/mcp-mesh_v0.5.2-with-path-fix_darwin_arm64.tar.gz"
-  sha256 "06233443d5955f495201253d2dd3a22c75bd5ac2a1325e99f6b93b6c7f727b8f"
+  url "https://github.com/dhyansraj/mcp-mesh/releases/download/v0.5.3/mcp-mesh_v0.5.3_darwin_arm64.tar.gz"
+  sha256 "3f70a801d424ecaf5f991a4111220438b2ba6ed2c743befce6660f4c930498f5"
   license "MIT"
-  version "0.5.2-with-path-fix"
+  version "0.5.3"
 
   # Dependencies
   depends_on "go" => :build
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dhyansraj/mcp-mesh/releases/download/v0.5.2-with-path-fix/mcp-mesh_v0.5.2-with-path-fix_darwin_amd64.tar.gz"
-      sha256 "f7652f97fdd5348f2690c9f65d8ea228cd15d228b1b6fa88845c7f9b99cf0868"
+      url "https://github.com/dhyansraj/mcp-mesh/releases/download/v0.5.3/mcp-mesh_v0.5.3_darwin_amd64.tar.gz"
+      sha256 "6d41348d63bc06f968fe2a48ef78304772163a6c0dfc221d036712ae7d332b4f"
     end
   end
 
